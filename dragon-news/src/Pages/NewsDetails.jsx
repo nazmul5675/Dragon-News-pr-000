@@ -17,6 +17,7 @@ const NewsDetails = () => {
 
     return (
         <div className='container mx-auto'>
+            <title>Dragon News | News Details</title>
             <Header></Header>
             <main className='grid grid-cols-12'>
 

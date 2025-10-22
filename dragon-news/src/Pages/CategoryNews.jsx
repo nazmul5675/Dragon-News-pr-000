@@ -25,6 +25,7 @@ const CategoryNews = () => {
     }, [data, id])
     return (
         <div>
+            <title>Dragon News | CategoryNews</title>
             <h2 className='font-bold'>Total ({categoryNews.length}) News Found</h2>
 
 

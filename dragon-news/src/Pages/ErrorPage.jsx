@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 const ErrorPage = () => {
     return (
         <div className="hero min-h-screen bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300">
+            <title>Dragon News | ErrorPage</title>
             <div className="text-center">
                 <h1 className="text-[120px] font-extrabold text-gray-800">404</h1>
                 <p className="text-2xl font-semibold text-gray-700 mb-4">

@@ -34,6 +34,7 @@ const Register = () => {
     }
     return (
         <div>
+            <title>Dragon News | Registration</title>
             <div className="hero bg-base-200 h-[800px]">
                 <div className="hero-content flex-col ">
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
