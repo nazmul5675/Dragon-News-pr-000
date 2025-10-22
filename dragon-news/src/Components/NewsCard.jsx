@@ -3,9 +3,10 @@ import { CiBookmark } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
 import { FaRegEye } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 const NewsCard = ({ news }) => {
     const [readMore, setReadMore] = useState(false);
-    const { title, rating, total_view, author, image_url, details } = news;
+    const { title, rating, total_view, author, image_url, details, id } = news;
     const dateFormat = new Date(author.published_date).toLocaleDateString();
     return (
         <div>
@@ -27,19 +28,21 @@ const NewsCard = ({ news }) => {
                 </div>
                 <div className="bg-gray-100 p-5">
                     <h1 className="font-bold mb-2 text-base">{title}</h1>
-                    <img className=" rounded-md mb-3 w-full bg-cover" src={image_url} alt="" />
+                    <Link to={`/details/${id}`}>
+                        <img className=" rounded-md mb-3 w-full bg-cover" src={image_url} alt="" /></Link>
                     <p className="text-sm"> {readMore ? details : `${details.slice(0, 200)}`}
                         <button onClick={() => setReadMore(!readMore)} className="text-sm mx-1 font-bold text-orange-500"> {readMore ? "Read Less" : "Read More..."}</button>
                     </p>
 
                     <div className="flex justify-between items-center border-t border-black/10 my-1">
-                        <div className="flex items-center gap-x-1  mt-3">
-                            <FaStar />
-                            <FaStar />
-                            <FaStar />
-                            <FaStar />
-                            <FaStar />
-                            <span className="font-semibold">{rating.number}</span>
+                        <div className="flex items-center gap-x-1 mt-3">
+                            {[...Array(5)].map((_, i) => (
+                                <FaStar
+                                    key={i}
+                                    className={i < Math.round(rating.number) ? "text-yellow-500" : "text-gray-300"}
+                                />
+                            ))}
+                            <span className="font-semibold ml-1">{rating.number}</span>
                         </div>
                         <div className="flex items-center gap-x-2 mt-3">
                             <FaRegEye />
