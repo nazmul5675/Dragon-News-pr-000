@@ -1,9 +1,15 @@
 import React, { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Provider/AuthProvider';
 
 const LoginPage = () => {
-    const { signInExistingUser } = use(AuthContext);
+    const { signInExistingUser, notify } = use(AuthContext);
+    const location = useLocation();
+    // console.log(location);
+    // console.log(location.state);
+    // console.log('location.state:', location.state);
+    // console.log('typeof location.state:', typeof location.state);
+    const navigate = useNavigate()
     const handleSignIn = (e) => {
         e.preventDefault()
         const email = e.target.email.value;
@@ -12,13 +18,18 @@ const LoginPage = () => {
             .then((userCredential) => {
 
                 const user = userCredential.user;
-                console.log(user);
+
+                // console.log(user);
+                navigate(location.state || "/");
+                notify('LogIn Successfully')
+
+
 
             })
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode, errorMessage)
+                notify(errorCode, errorMessage)
             });
     }
     return (

@@ -5,7 +5,7 @@ const headlines = [
     "💻 Kandari completes software project ahead of schedule — team celebrates success!",
     "📱 Kronofun announces a new cybersecurity tool for startups.",
     "🎓 DIU students build an AI model to read doctors’ handwriting.",
-    "🚴‍♂️ Nazmul Hridoy captures stunning travel photography in Cox’s Bazar!",
+    "🚴‍♂️ Md Nazmul Hasan Hridoy captures stunning travel photography in Cox’s Bazar!",
     "💡 Learn MERN stack: Master MongoDB, Express, React, and Node this semester.",
     "📈 Entrepreneurs see a 40% boost using Proyash’s digital campaign strategies.",
     "🌏 Google announces AI-integrated Chrome update — smarter, faster browsing.",

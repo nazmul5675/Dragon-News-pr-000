@@ -1,12 +1,15 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet, useNavigate, useNavigation } from 'react-router';
 import Header from '../Components/Header';
 import LatesNews from '../Components/LatesNews';
 import Navbar from '../Components/Navbar';
 import LeftAside from '../Components/HomeLayout/LeftAside';
 import RightAside from '../Components/HomeLayout/RightAside';
+import Loading from '../Components/Loading';
 
 const Layouts = () => {
+    const { state } = useNavigation();
+    // console.log(state);
     return (
         <div className='poppins container mx-auto'>
             <header>
@@ -22,7 +25,7 @@ const Layouts = () => {
                     <LeftAside></LeftAside>
                 </aside>
                 <section className="main col-span-6">
-                    <Outlet></Outlet>
+                    {state == "idle" ? <Outlet></Outlet> : <Loading></Loading>}
                 </section>
                 <aside className='col-span-3 sticky top-0 h-fit'><RightAside></RightAside></aside>
             </main>

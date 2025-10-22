@@ -21,10 +21,41 @@ const SocialLogin = () => {
 
             <div>
                 <h2 className="font-semibold text-2xl my-4">Find Us On</h2>
-                <h1 className="border rounded-t-md text-xl flex items-center gap-x-4 p-3 text-[#706F6F]"><FaFacebook />  Facebook</h1>
-                <h1 className=" border-l border-r text-xl flex items-center gap-x-4 p-3 text-[#706F6F]"><FaTwitter />  Twitter</h1>
-                <h1 className="border rounded-b-md text-xl flex items-center gap-x-4 p-3 text-[#706F6F]"><FaInstagramSquare />  Instagram</h1>
+
+                <h1 className="border rounded-t-md text-xl flex items-center gap-x-4 p-3 text-[#706F6F]">
+                    <FaFacebook />
+                    <a
+                        href="https://www.facebook.com/nazmul5676/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
+                </h1>
+
+                <h1 className="border-l border-r text-xl flex items-center gap-x-4 p-3 text-[#706F6F]">
+                    <FaTwitter />
+                    <a
+                        href="https://x.com/hridoyn61"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Twitter
+                    </a>
+                </h1>
+
+                <h1 className="border rounded-b-md text-xl flex items-center gap-x-4 p-3 text-[#706F6F]">
+                    <FaInstagramSquare />
+                    <a
+                        href="https://www.instagram.com/nazmul5675/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+                </h1>
             </div>
+
         </div>
     );
 };
